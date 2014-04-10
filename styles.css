@@ -1,0 +1,206 @@
+/*
+light blue
+rgb(201,219,237)
+
+2nd blue
+rgb(137,188,230)
+
+red orange
+rgb(187,81,65)
+
+orange
+rgb(225,117,100)
+
+peach
+rgb(234,168,137)
+
+yellow
+rgb(246,224,167)
+
+
+*/
+
+div#navigation {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 100px;
+  text-align: center;
+}
+
+div#email {
+  width: 54%;
+}
+
+div#navigation div {
+  transition: background-color 0.2s ease;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  padding: 30px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+div#navigation div:hover{
+  background-color: rgb(201,219,237);
+}
+
+
+div#linkedin {
+  width: 22%;
+}
+
+div#twitter {
+  width: 22%;
+}
+
+div#github {
+  width: 22%;
+}
+
+div#resume {
+  width: 22%;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+div#project_links {
+  transition: background-color 0.2s ease;
+  background-color: white;
+  border: 1px solid black;
+  padding: 30px;
+  width: 70%;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+div#project_links:hover{
+  background-color: rgb(201,219,237);
+   cursor: pointer;
+}
+
+div#projects img {
+  display: inline-block;
+  width: 500px;
+  border: 2px solid grey;
+}
+
+div#projects div {
+  display: block;
+  padding: 20px;
+}
+
+div#projects {
+  padding: 50px 30px;
+  background-color: rgb(201,219,237);
+  margin-top: 60px;
+}
+
+div#wrapper {
+  width: 100%;
+}
+
+div#about_me{
+  height: 100px;
+  padding: 100px 150px;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+div#name{
+  transition: background-color 0.2s ease;
+  padding: 20px;
+  display: block;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: 4em;
+  text-align: center;
+}
+
+div#name:hover {
+  background-color: rgb(201,219,237);
+  cursor: default;
+}
+
+.summary {
+  width: 300px;
+  float: right;
+  margin-right: 50px;
+  margin-top: 60px;
+  background-color: rgb(201,219,237);
+  border-radius: 10px;
+}
+
+span.title {
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.5em;
+  line-height: 2.5em;
+  padding-bottom: 10px;
+}
+
+#slideshow { 
+    position: relative; 
+    width: 500px; 
+    margin: 20px;
+    height: 379px; 
+    border: 2px solid grey;
+    overflow: hidden;
+}
+
+div#projects div#slideshow_wrapper {
+  padding: 0px;
+}
+
+div#projects div#slideshow {
+  padding: 0px;
+}
+
+div#projects div#slideshow div {
+  padding: 0px;
+}
+
+div#projects div#slideshow img {
+  padding: 0px;
+  width: auto;
+  height: 379px;
+  border: 0px;
+}
+
+div.slideshow_summary {
+  width: 300px;
+  float: right;
+  margin-right: 70px;
+  margin-top: -300px;
+  background-color: rgb(201,219,237);
+  border-radius: 10px;
+}
+
+#slideshow > div { 
+  position: absolute; 
+  padding: 0px;
+}

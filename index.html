@@ -1,1 +1,170 @@
-Hello World
+<html>
+<head>
+  <link href="normalize.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <header><div id="name">Kirsten Doyne<div></header>
+<div id="wrapper">
+  <div id="about_me"><span>Hello!</span>
+    <p>I'm from Charlotte, NC and I recently came to New York to become a web developer.  My background is in technical support and architecture. I want to make meaningful things in a digital space. Check out some of my work!</p></div>
+    <div id="project_links">Projects</div>
+  </div>
+  <div id="navigation">
+    <a href="mailto:&#107;&#105;&#114;&#115;&#116;&#101;&#110;&#046;&#100;&#111;&#121;&#110;&#101;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"><div id="email">Email Me</div></a>
+    <a href="kldoyneresume.pdf"><div id="resume">My Resume</div><a/>
+    <a href="http://www.twitter.com/kldoyne"><div id="twitter">Twitter</div></a>
+    <a href="http://www.linkedin.com/in/kirstendoyne"><div id="linkedin">Linked In</div></a>
+    <a href="http://www.github.com/kdoyne"><div id="github">Github</div></a>
+  </div>
+
+  <div id="projects">
+    <div id="archibot">
+      <a href="http://archibot.herokuapp.com"><img src="img/archibot.png" /></a>
+      <div class="summary"><span class="title">Archibot</span>
+        <br>This is a project for sharing and discovering architecturally significant buildings. Users can sign up and create trips, add buildings and architects, and find buildings close by. This was the first Rails app I made.
+      </div>
+    </div>
+    <div id="tangent">
+      <a href="http://tangentapp.herokuapp.com"><img src="img/tangent.png" /></a>
+      <div class="summary"><span class="title">Tangent</span>
+        <br>This project is an exploratory learning application. A user enters a word or topic on the main page. They are then taken to a word tree with related words. They can also see definitions, videos, pictures, and other information about the topic. They can track their journey and share topics with others. This is a rails app that includes a lot of javascript and D3.
+      </div>
+    </div>
+    <div id="sos">
+      <a href="http://startupsos.herokuapp.com"><img src="img/startupsos.png" /></a>
+      <div class="summary"><span class="title">Startup SOS</span>
+        <br>This was a side project done during the class. I used to work as a genius for Apple and I had a lot of people come to me with a lot of support questions. This is a simple app helps walk you through start up issues on a Mac. It is mainly designed to be used on a smart phone.
+      </div>
+    </div>
+    <div id="slideshow_wrapper">
+      <div id="slideshow">
+              <div>
+        <img src="img/pics/glass1.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass2.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass3.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass4.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass5.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass9.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass10.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass11.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass12.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass13.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass14.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass15.jpg">
+      </div>
+      <div>
+        <img src="img/pics/glass16.jpg">
+      </div>
+      <div>
+        <img src="img/pics/blocks.jpg">
+      </div>
+      <div>
+        <img src="img/pics/bridge3.jpg">
+      </div>
+      <div>
+        <img src="img/pics/bridge4.jpg">
+      </div>
+      <div>
+        <img src="img/pics/bridge5.jpg">
+      </div>
+      <div>
+        <img src="img/pics/bridge7.jpg">
+      </div>
+      <div>
+        <img src="img/pics/croydonmap.jpg">
+      </div>
+      <div>
+        <img src="img/pics/croydon6.jpg">
+      </div>
+      <div>
+        <img src="img/pics/croydon7.jpg">
+      </div>
+      <div>
+        <img src="img/pics/croydon4.jpg">
+      </div>
+      <div>
+        <img src="img/pics/shadow1.jpg">
+      </div>
+      <div>
+        <img src="img/pics/shadow2.jpg">
+      </div>
+      <div>
+        <img src="img/pics/shadow3.jpg">
+      </div>
+      <div>
+        <img src="img/pics/shadow4.jpg">
+      </div>
+      <div>
+        <img src="img/pics/shadow6.jpg">
+      </div>
+      <div>
+        <img src="img/pics/meal1.jpg">
+      </div>
+      <div>
+        <img src="img/pics/meal3.jpg">
+      </div>
+      <div>
+        <img src="img/pics/meal4.jpg">
+      </div>
+      <div>
+        <img src="img/pics/meal5.jpg">
+      </div>
+      <div>
+        <img src="img/pics/meal6.jpg">
+      </div>
+      </div>
+      <div class="slideshow_summary"><span class="title">Design</span>
+        <br>These are photos, renderings, and drawings from a variety of projects that I worked on during my time in archecture school and after. 
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+    var projects = $("div#projects")
+    var projectButton = $("#project_links").on("click", function(){
+      $("body").animate({ scrollTop: "810px" });
+    })
+
+    $("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() { 
+      $('#slideshow > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow');
+    },  3000);
+
+  </script>
+</body>
+</html>
+
