@@ -12,7 +12,7 @@ orange
 rgb(225,117,100)
 
 peach
-rgb(234,168,137)
+rgb(137,188,230)
 
 yellow
 rgb(246,224,167)
@@ -28,7 +28,7 @@ div#navigation {
 }
 
 div#email {
-  width: 54%;
+  width: 52%;
 }
 
 div#navigation div {
@@ -46,7 +46,7 @@ div#navigation div {
 }
 
 div#navigation div:hover{
-  background-color: rgb(201,219,237);
+  background-color: rgb(137,188,230);
 }
 
 
@@ -84,7 +84,7 @@ div#project_links {
   background-color: white;
   border: 1px solid black;
   padding: 30px;
-  width: 70%;
+  width: 69%;
   border-radius: 10px;
   margin: 0 auto;
   text-align: center;
@@ -94,7 +94,7 @@ div#project_links {
 }
 
 div#project_links:hover{
-  background-color: rgb(201,219,237);
+  background-color: rgb(137,188,230);
    cursor: pointer;
 }
 
@@ -142,7 +142,7 @@ div#name{
 }
 
 div#name:hover {
-  background-color: rgb(201,219,237);
+  background-color: rgb(137,188,230);
   cursor: default;
 }
 
