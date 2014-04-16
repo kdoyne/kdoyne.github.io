@@ -16,8 +16,6 @@ rgb(137,188,230)
 
 yellow
 rgb(246,224,167)
-
-
 */
 
 div#navigation {
@@ -225,6 +223,7 @@ div.slideshow_summary {
     margin: 10px;
     padding-right: 10px;
     color: black;
+    width: 100px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
     display: block;
