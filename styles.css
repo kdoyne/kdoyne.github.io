@@ -207,9 +207,10 @@ div.slideshow_summary {
   }
 
   div#about_me {
-    font-size: 1em;
-    display: block;
-    padding: 10px; 
+    font-size: .75em;
+    display: inline;
+    padding: 10px;
+
   }
 
   div#navigation div {
