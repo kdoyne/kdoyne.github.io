@@ -210,7 +210,7 @@ div.slideshow_summary {
     font-size: .75em;
     display: inline;
     padding: 10px;
-
+    margin-left: 10px;
   }
 
   div#navigation div {
