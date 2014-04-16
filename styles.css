@@ -212,7 +212,7 @@ div.slideshow_summary {
 
   div#about_me {
     font-size: 1em;
-    display: block; 
+    display: inline-block; 
   }
 
   div#navigation div {
@@ -238,7 +238,7 @@ div.slideshow_summary {
     width: 100%;
   }
 
-  .title{
+  .title {
     background-color: white;
     color: #33CCFF;
     position: fixed;
