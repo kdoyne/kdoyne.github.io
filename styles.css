@@ -209,6 +209,7 @@ div.slideshow_summary {
   div#name {
     background-color: rgb(137,188,230);
     font-size: 1em;
+    width: 100%;
   }
 
   div#about_me {
