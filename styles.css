@@ -224,7 +224,6 @@ div.slideshow_summary {
     margin: 10px;
     padding-right: 10px;
     color: black;
-    width: 100px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
     display: block;
@@ -236,6 +235,7 @@ div.slideshow_summary {
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
     display: inline-block;
+    width: 100%;
   }
 
   .title{
