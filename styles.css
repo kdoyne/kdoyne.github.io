@@ -255,6 +255,10 @@ div.slideshow_summary {
     font-weight: 400;
   }
 
+  div#projects {
+    width: 100%;
+  }
+
   div#projects div {
     display: inline-block;
     font-family: 'Droid Sans', sans-serif;
