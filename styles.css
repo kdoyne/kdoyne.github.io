@@ -230,6 +230,8 @@ div.slideshow_summary {
   }
 
   div#navigation {
+    position: relative;
+    top: 800px;
     background-color: white;
     margin: 10px;
     font-family: 'Droid Sans', sans-serif;
