@@ -227,15 +227,15 @@ div.slideshow_summary {
     width: 100px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
+    display: block;
   }
-
 
   div#navigation {
     background-color: white;
     margin: 10px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
-    display: block;
+    display: inline-block;
   }
 
   .title{
