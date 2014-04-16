@@ -210,7 +210,7 @@ div.slideshow_summary {
     font-size: .75em;
     display: inline;
     padding: 10px;
-    margin-left: 10px;
+    margin-left: 20%;
   }
 
   div#navigation div {
@@ -252,8 +252,8 @@ div.slideshow_summary {
   div#projects div {
     display: inline-block;
     font-family: 'Droid Sans', sans-serif;
-    font-weight: 800;
-    width: 100%;
+    font-weight: 700;
+    width: 120%;
   }
 }
 
