@@ -206,6 +206,16 @@ div.slideshow_summary {
 }
 
 @media only screen and (max-device-width: 690px) {
+  div#name {
+    background-color: rgb(137,188,230);
+    font-size: 1em;
+  }
+
+  div#about_me {
+    font-size: 1em;
+    display: block; 
+  }
+
   div#navigation div {
     background-color: white;
     border-radius: 10px;
@@ -222,15 +232,10 @@ div.slideshow_summary {
 
   div#navigation {
     background-color: white;
-    border-radius: 10px;
-    border: 1px solid black;
-    padding-left: 10px;
     margin: 10px;
-    padding-right: 10px;
-    color: black;
-    width: 100px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
+    display: block;
   }
 
   .title{
