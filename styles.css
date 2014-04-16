@@ -250,7 +250,6 @@ div.slideshow_summary {
     background-color: rgb(201,219,237);
   }
 
-
   body {
     font-size: 6em;
     font-weight: 400;
@@ -259,7 +258,7 @@ div.slideshow_summary {
   div#projects div {
     display: inline-block;
     font-family: 'Droid Sans', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     width: 120%;
   }
 }
