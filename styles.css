@@ -266,6 +266,11 @@ div.slideshow_summary {
     width: 90%;
     font-size: .85em;
   }
+
+  div.slideshow_summary {
+    margin-top: -300px;
+    background-color: rgb(201,219,237);
+  }
 }
 
 
