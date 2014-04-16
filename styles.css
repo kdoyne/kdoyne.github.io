@@ -263,7 +263,8 @@ div.slideshow_summary {
     display: block;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 400;
-    width: 80%;
+    width: 90%;
+    font-size: .5em;
   }
 }
 
