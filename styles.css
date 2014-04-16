@@ -236,20 +236,6 @@ div.slideshow_summary {
     width: 100%;
   }
 
-  div#project_links {
-    background-color: white;
-    border-radius: 10px;
-    border: 1px solid black;
-    padding-left: 10px;
-    text-align: center;
-    padding-right: 10px;
-    color: black;
-    width: 95%;
-    font-family: 'Droid Sans', sans-serif;
-    font-weight: 400;
-    display: block;
-  }
-
   .title {
     background-color: white;
     color: #33CCFF;
