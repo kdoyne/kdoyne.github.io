@@ -113,10 +113,6 @@ div#projects {
   margin-top: 60px;
 }
 
-div#wrapper {
-  width: 100%;
-}
-
 div#about_me{
   height: 100px;
   padding: 100px 150px;
@@ -212,7 +208,8 @@ div.slideshow_summary {
 
   div#about_me {
     font-size: 1em;
-    display: inline-block; 
+    display: block;
+    padding: 10px; 
   }
 
   div#navigation div {
@@ -238,6 +235,20 @@ div.slideshow_summary {
     font-weight: 700;
     display: inline-block;
     width: 100%;
+  }
+
+  div#project_links {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-left: 10px;
+    margin: 10px;
+    padding-right: 10px;
+    color: black;
+    width: 100px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
+    display: block;
   }
 
   .title {
