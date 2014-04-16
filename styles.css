@@ -260,10 +260,10 @@ div.slideshow_summary {
   }
 
   div#projects div {
-    display: inline-block;
+    display: block;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 400;
-    width: 120%;
+    width: 80%;
   }
 }
 
