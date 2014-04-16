@@ -244,6 +244,13 @@ div.slideshow_summary {
     padding: 5px;
   }
 
+  .summary {
+    width: 100%;
+    float: none;
+    background-color: rgb(201,219,237);
+  }
+
+
   body {
     font-size: 6em;
     font-weight: 400;
