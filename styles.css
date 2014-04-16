@@ -249,7 +249,7 @@ div.slideshow_summary {
     font-weight: 400;
   }
 
-  div.summary {
+  div#projects div {
     display: inline-block;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
