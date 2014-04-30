@@ -12,7 +12,7 @@
   <header><div id="name">Kirsten Doyne<div></header>
 
   <div id="about_me"><span>Hello!</span>
-    <p>I'm from Charlotte, NC and I recently came to New York to become a web developer. I used to work at an Apple Store as a genius. Before that I attended architecture school at UNC Charlotte. I want to use my problem solving background and my technical skills to make meaningful things. Check out some of my work!</p></div>
+    <p>I'm from Charlotte, NC and I recently came to New York to become a web developer. I used to work at an Apple Store as a genius. Before that I attended architecture school at UNC Charlotte. I want to use my problem solving background and my technical skills to make meaningful things. I'm currently looking for a full stack position. Check out some of my work!</p></div>
   </div>
   <div id="navigation">
     <div id="project_links">Projects</div>
@@ -130,7 +130,7 @@
   <script>
     var projects = $("div#projects")
     var projectButton = $("#project_links").on("click", function(){
-      $("body").animate({ scrollTop: "810px" });
+      $("body").animate({ scrollTop: ($("div#projects").position().top)+60 });
     })
 
     $("#slideshow > div:gt(0)").hide();
