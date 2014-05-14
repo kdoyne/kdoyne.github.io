@@ -310,7 +310,7 @@ div.small_photos > img {
   }
 
   div.small_photos {
-    display: none;
+    display: hidden;
   }
 }
 
