@@ -293,10 +293,10 @@ div.small_photos > img {
   div#projects {
     width: 120%;
     background-color: rgb(201,219,237);
-    height: 1000px;
+    height: 1500px;
   }
 
-  div#projects > div {
+  div#projects div {
     display: block;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 400;
