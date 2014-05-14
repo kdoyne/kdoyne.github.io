@@ -19,10 +19,11 @@ rgb(246,224,167)
 */
 
 img#me {
-  width: 225px;
+  margin-top: 10px;
+  width: 200px;
   display: block;
   margin: 0 auto;
-  border-radius: 125px;
+  border-radius: 50%;
   border: solid black 2px;
 }
 
@@ -122,8 +123,11 @@ div#projects {
 }
 
 div#about_me{
+  display: block;
+  margin: 0 auto;
   height: 100px;
   padding: 20px 150px;
+  width: 700px;
   font-family: 'Droid Sans', sans-serif;
   font-weight: 400;
 }
