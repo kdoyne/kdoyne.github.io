@@ -18,6 +18,19 @@ yellow
 rgb(246,224,167)
 */
 
+div.small_photos > img {
+  display: inline;
+  width: 200px; 
+  padding-right: 5px;
+}
+
+div.small_photos {
+  width: 800px;
+  padding: 0px;
+  position: relative;
+  left: -60px;
+}
+
 img#me {
   margin-top: 10px;
   width: 200px;
@@ -105,7 +118,7 @@ div#project_links:hover{
    cursor: pointer;
 }
 
-div#projects img {
+div#projects img.big {
   display: inline-block;
   width: 500px;
   border: 2px solid grey;
@@ -156,7 +169,7 @@ div#name:hover {
   width: 500px;
   float: right;
   margin-right: 50px;
-  margin-top: 60px;
+  margin-top: 20px;
   background-color: rgb(201,219,237);
   border-radius: 10px;
 }
@@ -209,6 +222,11 @@ div.slideshow_summary {
 #slideshow > div { 
   position: absolute; 
   padding: 0px;
+}
+
+div.small_photos > img {
+  display: inline;
+  width: 200px;
 }
 
 @media only screen and (max-device-width: 690px) {
