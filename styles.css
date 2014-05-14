@@ -312,6 +312,10 @@ div.small_photos > img {
   div.small_photos {
     display: hidden;
   }
+
+  div.small_photos > img{
+    display: hidden;
+  }
 }
 
 
