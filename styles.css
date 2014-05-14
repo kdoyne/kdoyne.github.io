@@ -308,6 +308,10 @@ div.small_photos > img {
     position: relative;
     top: 500px;
   }
+
+  div.small_photos {
+    display: none;
+  }
 }
 
 
