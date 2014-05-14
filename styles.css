@@ -295,7 +295,7 @@ div.small_photos > img {
     background-color: rgb(201,219,237);
   }
 
-  div#projects div {
+  div#projects > div {
     display: block;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 400;
