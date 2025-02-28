@@ -6,177 +6,8 @@
     <title>Kirsten Doyne</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <style>
-        .calculator {
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        button {
-            margin: 5px;
-        }
-    </style> -->
 </head>
 <body>
-    This is my website. Welcome. It's under construction. Check out my <a href="https://linkedin.com/in/kirsten-doyne">LinkedIn</a> if you want to know about me for now.
-    
-    
-    <!-- <div id="app">
-        <barbell-calculator></barbell-calculator>
-        <barbell-calculator-v2></barbell-calculator-v2>
-    </div>
-
-    <script>
-        Vue.component('barbell-calculator', {
-            data() {
-                return {
-                    showComponent: false,
-                    startingWeights: [15, 22, 33, 45],
-                    selectedWeight: 15,
-                    increments: [2.5, 5, 10, 15, 25, 35, 45],
-                    totalWeight: 15,
-                    weightAdded: 0
-                };
-            },
-            created() {
-                // Get the URL parameters
-                const params = new URLSearchParams(window.location.search);
-                console.log('called');
-                console.log(params);
-                // Check if 'show' parameter is present
-                this.showComponent = params.has('show');
-            },
-            template: `
-                <div class="calculator" v-if="showComponent">
-                    <h2>Barbell Weight Calculator</h2>
-                    
-                    <label for="startingWeight">Starting Weight:</label>
-                    <select v-model="selectedWeight" @change="updateTotal">
-                        <option v-for="weight in startingWeights" :key="weight" :value="weight">
-                            {{ weight }} lbs
-                        </option>
-                    </select>
-                    
-                    <h3>Total Weight: {{ totalWeight }} lbs</h3>
-
-                    <h4>Add/Remove Weights:</h4>
-                    <div>
-                        <button v-for="increment in increments" :key="increment" @click="addWeight(increment)">
-                            + {{ increment }} lbs
-                        </button>
-                    </div>
-                    <div>
-                        <button v-for="increment in increments" :key="'remove-' + increment" @click="removeWeight(increment)">
-                            - {{ increment }} lbs
-                        </button>
-                    </div>
-                </div>
-            `,
-            methods: {
-                updateTotal() {
-                    this.totalWeight = this.selectedWeight + this.weightAdded;
-                },
-                addWeight(increment) {
-                    this.weightAdded += increment;
-                    this.updateTotal();
-                },
-                removeWeight(increment) {
-                    if (this.weightAdded - increment >= 0) {
-                        this.weightAdded -= increment;
-                    }
-                    this.updateTotal();
-                }
-            },
-            mounted() {
-                this.updateTotal(); // Set initial total weight
-            }
-        });
-
-        Vue.component('barbell-calculator-v2', {
-            data() {
-                return {
-                    showComponent:false,
-                    startingWeights: [15, 22, 33, 45],
-                    selectedStartingWeight: 15,
-                    goalWeight: null,
-                    increments: [45, 35, 25, 15, 10, 5, 2.5], // Ordered from largest to smallest
-                    selectedWeights: [],
-                    message: ''
-                };
-            },
-            created() {
-                // Get the URL parameters
-                const params = new URLSearchParams(window.location.search);
-                // Check if 'show' parameter is present
-                this.showComponent = params.has('show');
-            },
-            template: `
-                <div class="calculator" v-if="showComponent">
-                    <h2>Barbell Weight Calculator</h2>
-                    
-                    <label for="startingWeight">Starting Weight:</label>
-                    <select v-model="selectedStartingWeight">
-                        <option v-for="weight in startingWeights" :key="weight" :value="weight">
-                            {{ weight }} lbs
-                        </option>
-                    </select>
-                    
-                    <div>
-                        <label for="goalWeight">Goal Weight:</label>
-                        <input type="number" v-model="goalWeight" placeholder="Enter goal weight" />
-                    </div>
-                    
-                    <button @click="calculateWeights">Calculate Weights</button>
-                    
-                    <h3>Recommended Weights:</h3>
-                    <div v-if="selectedWeights.length">
-                        <ul>
-                            <li v-for="weight in selectedWeights" :key="weight">{{ weight }} lbs</li>
-                        </ul>
-                    </div>
-                    <div v-if="message">{{ message }}</div>
-                </div>
-            `,
-            methods: {
-                calculateWeights() {
-                    this.selectedWeights = [];
-                    this.message = '';
-
-                    const weightNeeded = this.goalWeight - this.selectedStartingWeight;
-
-                    if (weightNeeded < 0) {
-                        this.message = "Goal weight must be greater than starting weight.";
-                        return;
-                    }
-
-                    // Calculate pairs of weights
-                    let remainingWeight = weightNeeded;
-
-                    for (let i = 0; i < this.increments.length; i++) {
-                        const increment = this.increments[i];
-                        // Use the weight in pairs
-                        while (remainingWeight >= increment * 2) {
-                            this.selectedWeights.push(increment);
-                            this.selectedWeights.push(increment); // Add it twice for symmetry
-                            remainingWeight -= increment * 2;
-                        }
-                    }
-
-                    if (remainingWeight > 0) {
-                        this.message = "Cannot reach the exact goal weight with available increments in pairs.";
-                    }
-                }
-            }
-        });
-
-
-        new Vue({
-            el: '#app'
-        });
-    </script> -->
-
     <div id="app">
         <div class="container">
             <div v-if="showCalculators">
@@ -271,8 +102,11 @@
                     </div>
                 </div>
             </div>
-            <div v-else class="reveal-button-container">
-                <button @click="revealCalculators" class="reveal-button">Click here for a useful gym tool</button>
+            <div v-else>
+                This is my website. Welcome. It's under construction. Check out my <a href="https://linkedin.com/in/kirsten-doyne">LinkedIn</a> if you want to know about me for now.
+                <div class="reveal-button-container">
+                    <button @click="revealCalculators" class="reveal-button">Click here for a useful gym tool</button>
+                </div>
             </div>
         </div>
     </div>
