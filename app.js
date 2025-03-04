@@ -45,8 +45,14 @@ createApp({
             return this.targetWeight >= parseFloat(this.barType);
         },
         totalWeight() {
-            const plateWeight = this.selectedPlates.reduce((sum, weight) => sum + parseFloat(weight), 0) * 2;
-            return parseFloat(this.builderBarType) + plateWeight;
+            if (this.result) {
+                // For Weight to Plates calculator
+                return parseFloat(this.targetWeight);
+            } else {
+                // For Plates to Weight calculator
+                const plateWeight = this.selectedPlates.reduce((sum, weight) => sum + parseFloat(weight), 0) * 2;
+                return parseFloat(this.builderBarType) + plateWeight;
+            }
         },
         availablePlates() {
             return this.unit === 'kg' ? this.availablePlatesKg : this.availablePlatesLb;
@@ -56,6 +62,14 @@ createApp({
         }
     },
     methods: {
+        getRequiredPlates(plates) {
+            // Count the occurrences of each plate
+            const plateCounts = {};
+            plates.forEach(plate => {
+                plateCounts[plate] = (plateCounts[plate] || 0) + 1;
+            });
+            return plateCounts;
+        },
         handleUnitChange() {
             // Convert bar types
             const barWeightMap = {
@@ -80,6 +94,10 @@ createApp({
                     : (parseFloat(weight) * 2.20462).toFixed(1); // kg to lb
                 return parseFloat(converted);
             });
+
+            // Clear result when changing units
+            this.result = null;
+            this.error = null;
         },
         calculatePlates() {
             this.error = null;
@@ -108,7 +126,7 @@ createApp({
             // Check if we couldn't match the exact weight
             if (remainingWeight > 0) {
                 const actualWeight = targetWeight - (remainingWeight * 2);
-                this.error = `Cannot make exact weight. Closest possible: ${actualWeight}${this.unit}`;
+                this.error = `Cannot make exact weight. Closest possible: ${actualWeight.toFixed(1)}${this.unit}`;
             }
 
             this.result = plates;
