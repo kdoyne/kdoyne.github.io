@@ -44,8 +44,14 @@
                         <div v-if="result" class="result-section">
                             <h3>Required Plates</h3>
                             <div class="plates-display">
-                                <div v-for="(count, weight) in getRequiredPlates(result)" :key="weight" class="plate-item">
-                                    {{ count }}x {{ weight }}{{ unit }}
+                                <div 
+                                    v-for="(count, weight) in getRequiredPlates(result)" 
+                                    :key="weight" 
+                                    class="plate-item"
+                                    :data-weight="weight"
+                                >
+                                    <div class="plate-count">{{ count }}×</div>
+                                    <div class="plate-weight">{{ weight }}{{ unit }}</div>
                                 </div>
                             </div>
                             <p class="total">Total Weight: {{ totalWeight }}{{ unit }}</p>
@@ -77,8 +83,9 @@
                                         :key="plate"
                                         @click="addPlate(plate)"
                                         class="plate-button"
+                                        :data-weight="plate"
                                     >
-                                        +{{ plate }}{{ unit }}
+                                        <span class="plate-label">{{ plate }}{{ unit }}</span>
                                     </button>
                                 </div>
                             </div>
@@ -86,8 +93,13 @@
                             <div v-if="selectedPlates.length > 0" class="selected-plates">
                                 <h3>Selected Plates (per side)</h3>
                                 <div class="plates-display">
-                                    <div v-for="(plate, index) in selectedPlates" :key="index" class="plate-item">
-                                        {{ plate }}{{ unit }}
+                                    <div 
+                                        v-for="(plate, index) in selectedPlates" 
+                                        :key="index" 
+                                        class="plate-item"
+                                        :data-weight="plate"
+                                    >
+                                        <div class="plate-weight">{{ plate }}{{ unit }}</div>
                                         <button @click="removePlate(index)" class="remove-plate">&times;</button>
                                     </div>
                                 </div>
@@ -102,11 +114,8 @@
                     </div>
                 </div>
             </div>
-            <div v-else>
-                This is my website. Welcome. It's under construction. Check out my <a href="https://linkedin.com/in/kirsten-doyne">LinkedIn</a> if you want to know about me for now.
-                <div class="reveal-button-container">
-                    <button @click="revealCalculators" class="reveal-button">Click here for a useful gym tool</button>
-                </div>
+            <div v-else class="reveal-button-container">
+                <button @click="revealCalculators" class="reveal-button">Click here for a useful gym tool</button>
             </div>
         </div>
     </div>
