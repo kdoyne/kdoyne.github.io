@@ -272,44 +272,81 @@ button:disabled {
 }
 
 .plate-button {
-    background: #404040;
-    color: white;
-    font-size: 1.4rem;
-    font-weight: bold;
-    padding: 1rem;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid #1a1a1a;
     transition: transform 0.2s;
-    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Color coding for plate buttons */
-.plate-button[data-weight="55"] { background: #e74c3c; }
-.plate-button[data-weight="45"] { background: #3498db; }
-.plate-button[data-weight="35"] { background: #f1c40f; }
-.plate-button[data-weight="25"] { background: #2ecc71; }
-.plate-button[data-weight="15"] { background: #f1c40f; }
-.plate-button[data-weight="10"] { 
-    background: #ecf0f1; 
-    color: #2c3e50;
+.plate-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.plate-button .plate-label {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Plate colors */
+.plate-button[data-weight="55"],
+.plate-button[data-weight="5"] {
+    background-color: #E74C3C; /* Red */
+}
+
+.plate-button[data-weight="45"] {
+    background-color: #3498DB; /* Blue */
+}
+
+.plate-button[data-weight="35"],
+.plate-button[data-weight="15"] {
+    background-color: #F1C40F; /* Yellow */
+}
+
+.plate-button[data-weight="25"] {
+    background-color: #2ECC71; /* Green */
+}
+
+.plate-button[data-weight="10"] {
+    background-color: #ECF0F1; /* White */
 }
 
 .plate-button[data-weight="10"] .plate-label {
-    color: #2c3e50;
-    text-shadow: none;
-    -webkit-text-stroke: 0;
+    color: #2C3E50; /* Dark text for white plate */
 }
 
-.plate-button[data-weight="5"] { background: #e74c3c; }
-.plate-button[data-weight="2.5"] { background: #95a5a6; }
+.plate-button[data-weight="2.5"] {
+    background-color: #95A5A6; /* Gray */
+}
 
 .plate-button:hover {
-    transform: translateY(-2px) scale(1.05);
+    transform: scale(1.05);
+}
+
+.plate-button:active {
+    transform: scale(0.95);
 }
 
 .total {

@@ -83,7 +83,7 @@
                                         :key="plate"
                                         @click="addPlate(plate)"
                                         class="plate-button"
-                                        :data-weight="plate"
+                                        :data-weight="Math.floor(plate)"
                                     >
                                         <span class="plate-label">{{ plate }}{{ unit }}</span>
                                     </button>
