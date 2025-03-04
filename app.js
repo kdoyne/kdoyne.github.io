@@ -50,6 +50,9 @@ createApp({
         },
         availablePlates() {
             return this.unit === 'kg' ? this.availablePlatesKg : this.availablePlatesLb;
+        },
+        formattedTotalWeight() {
+            return `${this.totalWeight.toFixed(1)}${this.unit}`;
         }
     },
     methods: {

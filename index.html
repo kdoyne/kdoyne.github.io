@@ -93,6 +93,7 @@
                             <div v-if="selectedPlates.length > 0" class="selected-plates">
                                 <h3>Selected Plates (per side)</h3>
                                 <div class="plates-display">
+                                    <div class="barbell-line"></div>
                                     <div 
                                         v-for="(plate, index) in selectedPlates" 
                                         :key="index" 
@@ -103,12 +104,10 @@
                                         <button @click="removePlate(index)" class="remove-plate">&times;</button>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="builder-total">
-                                <h3>Total Weight</h3>
-                                <p class="total">{{ builderTotalWeight }}{{ unit }}</p>
-                                <button @click="clearPlates" class="clear-button">Clear All Plates</button>
+                                <div class="weight-total">
+                                    <p>Total Weight: <span class="total-value">{{ totalWeight }}{{ unit }}</span></p>
+                                    <button @click="clearPlates" class="clear-button">Clear All</button>
+                                </div>
                             </div>
                         </div>
                     </div>

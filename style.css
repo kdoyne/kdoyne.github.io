@@ -328,19 +328,37 @@ button:disabled {
     border-radius: 4px;
 }
 
-.clear-button {
+.weight-total {
     margin-top: 1rem;
-    background-color: #e74c3c;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.weight-total p {
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+}
+
+.total-value {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.clear-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
 }
 
 .clear-button:hover {
-    background-color: #c0392b;
-}
-
-.builder-total {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
+    background-color: #c82333;
 }
 
 .reveal-button-container {
