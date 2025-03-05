@@ -46,13 +46,14 @@ createApp({
         isValidWeight() {
             return this.targetWeight >= parseFloat(this.barType);
         },
-        totalWeight() {
-            if (this.result) {
-                return parseFloat(this.targetWeight);
-            } else {
-                const plateWeight = this.selectedPlates.reduce((sum, weight) => sum + parseFloat(weight), 0) * 2;
-                return parseFloat(this.builderBarType) + plateWeight;
-            }
+        weightToPlatesTotal() {
+            if (!this.result) return 0;
+            const plateWeight = this.result.reduce((sum, weight) => sum + parseFloat(weight), 0) * 2;
+            return parseFloat(this.barType) + plateWeight;
+        },
+        platesTotal() {
+            const plateWeight = this.selectedPlates.reduce((sum, weight) => sum + parseFloat(weight), 0) * 2;
+            return parseFloat(this.builderBarType) + plateWeight;
         },
         availablePlates() {
             return this.unit === 'kg' ? this.availablePlatesKg : this.availablePlatesLb;
@@ -63,7 +64,7 @@ createApp({
     },
     methods: {
         addToSession() {
-            this.sessionWeights.push(this.totalWeight);
+            this.sessionWeights.push(this.platesTotal);
             // Show temporary success message
             this.$nextTick(() => {
                 const addButton = document.querySelector('.add-to-session');
@@ -85,12 +86,16 @@ createApp({
             this.sessionWeights = [];
         },
         getRequiredPlates(plates) {
-            // Count the occurrences of each plate
+            // Count the occurrences of each plate and sort by weight
             const plateCounts = {};
             plates.forEach(plate => {
                 plateCounts[plate] = (plateCounts[plate] || 0) + 1;
             });
-            return plateCounts;
+            // Sort plates by weight (descending)
+            return Object.fromEntries(
+                Object.entries(plateCounts)
+                    .sort(([a], [b]) => parseFloat(b) - parseFloat(a))
+            );
         },
         handleUnitChange() {
             // Convert bar types

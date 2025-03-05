@@ -42,19 +42,19 @@
                         </div>
 
                         <div v-if="result" class="result-section">
-                            <h3>Required Plates</h3>
-                            <div class="plates-display">
+                            <h3>Required Plates (per side)</h3>
+                            <div class="plates-display selected-plates">
                                 <div 
                                     v-for="(count, weight) in getRequiredPlates(result)" 
                                     :key="weight" 
                                     class="plate-item"
                                     :data-weight="weight"
                                 >
-                                    <div class="plate-count">{{ count }}×</div>
                                     <div class="plate-weight">{{ weight }}{{ unit }}</div>
+                                    <div class="plate-count" style="position: absolute; top: -20px; right: -10px;">{{ count }}</div>
                                 </div>
                             </div>
-                            <p class="total">Total Weight: {{ totalWeight }}{{ unit }}</p>
+                            <p class="total">Total Weight: {{ weightToPlatesTotal }}{{ unit }}</p>
                         </div>
 
                         <div v-if="error" class="error">
@@ -105,7 +105,7 @@
                                     </div>
                                 </div>
                                 <div class="weight-total">
-                                    <p>Total Weight: <span class="total-value">{{ totalWeight }}{{ unit }}</span></p>
+                                    <p>Total Weight: <span class="total-value">{{ platesTotal }}{{ unit }}</span></p>
                                     <div class="weight-actions">
                                         <button @click="addToSession" class="add-to-session">Add to Session</button>
                                         <button @click="clearPlates" class="clear-button">Clear All</button>
