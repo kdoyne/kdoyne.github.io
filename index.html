@@ -8,7 +8,6 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="summary">This is my website. Welcome. It's under construction. Check out my <a href="https://linkedin.com/in/kirsten-doyne">LinkedIn</a> if you want to know about me for now.</div>
     <div id="app">
         <div class="container">
             <div v-if="showCalculators">
@@ -107,7 +106,25 @@
                                 </div>
                                 <div class="weight-total">
                                     <p>Total Weight: <span class="total-value">{{ totalWeight }}{{ unit }}</span></p>
-                                    <button @click="clearPlates" class="clear-button">Clear All</button>
+                                    <div class="weight-actions">
+                                        <button @click="addToSession" class="add-to-session">Add to Session</button>
+                                        <button @click="clearPlates" class="clear-button">Clear All</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-if="sessionWeights.length > 0" class="session-weights">
+                                <h3>Session Weights</h3>
+                                <div class="session-list">
+                                    <div v-for="(weight, index) in sessionWeights" :key="index" class="session-weight">
+                                        {{ weight }}{{ unit }}
+                                    </div>
+                                </div>
+                                <div class="session-actions">
+                                    <button @click="copySession" class="copy-button" :class="{ success: copiedToClipboard }">
+                                        {{ copiedToClipboard ? 'Copied!' : 'Copy to Clipboard' }}
+                                    </button>
+                                    <button @click="clearSession" class="clear-button">Clear Session</button>
                                 </div>
                             </div>
                         </div>
@@ -115,6 +132,7 @@
                 </div>
             </div>
             <div v-else class="reveal-button-container">
+                <div>This is my website. Welcome. It's under construction. Check out my <a href="https://linkedin.com/in/kirsten-doyne">LinkedIn</a> if you want to know about me for now.</div>
                 <button @click="revealCalculators" class="reveal-button">Click here for a useful gym tool</button>
             </div>
         </div>

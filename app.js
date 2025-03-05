@@ -11,6 +11,8 @@ createApp({
             error: null,
             selectedPlates: [], // Array to store selected plates for builder
             showCalculators: false, // Default to hidden
+            sessionWeights: [], // Array to store weights for the session
+            copiedToClipboard: false, // Flag for showing copy confirmation
             availablePlatesKg: [
                 25, // Red plates
                 20, // Blue plates
@@ -46,10 +48,8 @@ createApp({
         },
         totalWeight() {
             if (this.result) {
-                // For Weight to Plates calculator
                 return parseFloat(this.targetWeight);
             } else {
-                // For Plates to Weight calculator
                 const plateWeight = this.selectedPlates.reduce((sum, weight) => sum + parseFloat(weight), 0) * 2;
                 return parseFloat(this.builderBarType) + plateWeight;
             }
@@ -57,11 +57,33 @@ createApp({
         availablePlates() {
             return this.unit === 'kg' ? this.availablePlatesKg : this.availablePlatesLb;
         },
-        formattedTotalWeight() {
-            return `${this.totalWeight.toFixed(1)}${this.unit}`;
+        formattedSessionWeights() {
+            return this.sessionWeights.map(weight => `${weight}${this.unit}`).join(', ');
         }
     },
     methods: {
+        addToSession() {
+            this.sessionWeights.push(this.totalWeight);
+            // Show temporary success message
+            this.$nextTick(() => {
+                const addButton = document.querySelector('.add-to-session');
+                addButton.classList.add('success');
+                setTimeout(() => {
+                    addButton.classList.remove('success');
+                }, 1000);
+            });
+        },
+        copySession() {
+            navigator.clipboard.writeText(this.formattedSessionWeights).then(() => {
+                this.copiedToClipboard = true;
+                setTimeout(() => {
+                    this.copiedToClipboard = false;
+                }, 2000);
+            });
+        },
+        clearSession() {
+            this.sessionWeights = [];
+        },
         getRequiredPlates(plates) {
             // Count the occurrences of each plate
             const plateCounts = {};
@@ -89,6 +111,14 @@ createApp({
 
             // Convert selected plates
             this.selectedPlates = this.selectedPlates.map(weight => {
+                const converted = this.unit === 'kg'
+                    ? (parseFloat(weight) * 0.453592).toFixed(1) // lb to kg
+                    : (parseFloat(weight) * 2.20462).toFixed(1); // kg to lb
+                return parseFloat(converted);
+            });
+
+            // Convert session weights
+            this.sessionWeights = this.sessionWeights.map(weight => {
                 const converted = this.unit === 'kg'
                     ? (parseFloat(weight) * 0.453592).toFixed(1) // lb to kg
                     : (parseFloat(weight) * 2.20462).toFixed(1); // kg to lb
